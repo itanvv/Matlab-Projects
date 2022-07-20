@@ -1,0 +1,53 @@
+function plotMohrCircle()
+[sigma_x, sigma_y, tau_xy] = takeInput(); %First take input from user
+
+[radius, center_x, center_y, sigma_1, sigma_2, tau_max, tau_min] = calcValues() %Find necessary values
+
+end 
+% == Plotting a circle and marking extreme points ==
+theta = 0:0.01:2*pi;
+
+% Using parametric equation of circle
+x = center_x + radius*cos(theta); 
+y = center_y + radius*sin(theta);
+plot(x,y);
+hold on;
+grid on;
+title("\color{red}Mohr's Circle", 'FontSize', 20)
+xlabel("\color{blue}Normal Stress, \sigma",'FontSize', 18);
+ylabel("\color{blue}Shear Stress, \tau", 'FontSize', 18);
+plot([sigma_1 sigma_2], [0 0]) % connects sigma_1 and sigma_2 by
+% the x-values in one vector and the y-values in another vector
+
+plot([center_x center_x],[tau_max tau_min], 'b:') % connects tau_max and tau_min
+
+% plot(center_x, center_y, 'g*'); % marks center of the circle
+
+
+text(center_x, center_y, "C(" + center_x + ", 0)", 'FontSize', 13); 
+text(sigma_1, 0, "\sigma_{1}(" + sigma_1 + ",0)" , 'FontSize', 14); 
+text(sigma_2, 0, "\sigma_{2}(" + sigma_2 + ",0)" , 'FontSize', 14);
+text(center_x, tau_max, "\tau_{max}(" + center_x + ", " + tau_max + ")", 'FontSize', 14); 
+text(center_x, tau_min, "\tau_{min}(" + center_x + ", " + tau_min + ")", 'FontSize', 14); 
+
+% Marking point, A
+text(sigma_x,tau_xy, "A(" + sigma_x + ", " + tau_xy + ")", 'FontSize', 14) ;
+plot([center_x sigma_x], [0 tau_xy]);
+% slope_sigma = (0-tau_xy)/(sigma_1 - sigma_x);
+% if (sigma_x>0)
+%     x_sigma = center_x+1.2*radius;
+% else
+%     x_sigma = center_x-1.2*radius;
+% end
+% y_sigma = 0 + slope_sigma*(x_sigma-sigma_1);
+% plot([sigma_x x_sigma], [tau_xy y_sigma]);
+plot([sigma_1 sigma_x], [0 tau_xy]);
+plot([center_x sigma_x], [tau_min tau_xy], 'm');
+hold off;
+axis equal; % Makes aspect ratio = 1 to avoid showing ellipse
+
+
+
+
+
+
