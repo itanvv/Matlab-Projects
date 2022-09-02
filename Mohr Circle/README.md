@@ -1,6 +1,6 @@
 ## Mohr's Circle and 2D Stress Calculator App using MATLAB
 
-![image.png](https://i.postimg.cc/8zCtgQqX/image.png)](https://postimg.cc/GHZkvN3v)
+![image.png](https://i.postimg.cc/8zCtgQqX/image.png)
 
 This project was basically intended as a group project for *CE 206 Engineering Computations Sessionals*. 
 This app takes stress block stress inputs and plots mohr circle and marks max/min stress showing the orientation of respective planes.
@@ -10,6 +10,6 @@ This app takes stress block stress inputs and plots mohr circle and marks max/mi
 - Animated Plot
 - [Help file](https://github.com/CapitalString/Matlab-Projects/blob/master/Mohr%20Circle/App/Help_File.pdf) for ease of use.
 
-- Explort plot as .png
+- Export plot as .png
 ![image.png](https://i.postimg.cc/43Pf7c8x/image.png)
 
