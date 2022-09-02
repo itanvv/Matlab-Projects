@@ -2,8 +2,9 @@
 
 ![image.png](https://i.postimg.cc/8zCtgQqX/image.png)
 
-This project was basically intended as a group project for *CE 206 Engineering Computations Sessionals*. 
-This app takes stress block stress inputs and plots mohr circle and marks max/min stress showing the orientation of respective planes.
+This project was basically intended as a project for *CE 206 Engineering Computations Sessional*. 
+This app takes stress block stress inputs and plots mohr circle and marks max/min stress showing the orientation of respective planes. 
+This app can also export the plot and show animation.
 
 ![image.png](https://i.postimg.cc/fywY7Ysq/image.png)
 
